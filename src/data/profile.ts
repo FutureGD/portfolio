@@ -39,9 +39,11 @@ export const profile: Profile = {
   // (likely https://futuregd.github.io/portfolio or similar). Until
   // then, openGraph `url` is omitted from the metadata.
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "",
-  // Résumé PDF lives at public/resume/resume.pdf. The env var is set
-  // in .env.local and (for production) as a GitHub Secret.
-  resumeUrl: process.env.NEXT_PUBLIC_RESUME_URL || "",
+  // Résumé PDF lives at public/resume/resume.pdf. The path is read from
+  // NEXT_PUBLIC_RESUME_URL if set (lets you override or disable per-env),
+  // otherwise it falls back to the default path so the button always
+  // works as long as the PDF file is present in the repo.
+  resumeUrl: process.env.NEXT_PUBLIC_RESUME_URL || "/resume/resume.pdf",
   // Contact form was removed from the site — direct email/GitHub/LinkedIn
   // links are used instead. The endpoint field stays for type completeness
   // but is unused by any component now.

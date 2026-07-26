@@ -29,7 +29,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # Node 22 LTS — Node 20 was deprecated on GitHub Actions
+          # runners in Sept 2025. See:
+          # https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+          node-version: 22
           cache: "npm"
 
       - run: npm ci
