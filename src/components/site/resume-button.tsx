@@ -3,6 +3,7 @@
 import { FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { profile } from "@/data/profile";
+import { withBasePath } from "@/lib/asset";
 
 /**
  * Resume download button.
@@ -19,7 +20,7 @@ export function ResumeButton() {
   if (!profile.resumeUrl) return null;
   return (
     <Button asChild size="lg" variant="outline">
-      <a href={profile.resumeUrl} download>
+      <a href={withBasePath(profile.resumeUrl)} download>
         <FileDown className="mr-2 h-4 w-4" aria-hidden />
         Download résumé
       </a>
