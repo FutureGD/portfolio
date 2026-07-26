@@ -22,7 +22,7 @@ export function ResumeButton() {
     <Button asChild size="lg" variant="outline">
       <a href={withBasePath(profile.resumeUrl)} download>
         <FileDown className="mr-2 h-4 w-4" aria-hidden />
-        Download résumé
+        Download Resume
       </a>
     </Button>
   );
