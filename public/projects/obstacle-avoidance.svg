@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="OBSTACLE AVOIDANCE thumbnail">
+  <rect width="800" height="500" fill="#0b1020"/>
+  
+        <polygon points="280,500 520,500 460,180 340,180" fill="#fbbf24" opacity="0.15"/>
+        <polygon points="280,500 520,500 460,180 340,180" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.4"/>
+        <line x1="400" y1="500" x2="400" y2="180" stroke="#ef4444" stroke-width="2" stroke-dasharray="20 20" opacity="0.5"/>
+        <!-- obstacles (other vehicles) -->
+        <rect x="350" y="280" width="40" height="60" rx="4" fill="#ef4444" opacity="0.85"/>
+        <rect x="410" y="340" width="40" height="60" rx="4" fill="#ef4444" opacity="0.7"/>
+        <rect x="370" y="400" width="40" height="60" rx="4" fill="#ef4444" opacity="0.55"/>
+        <!-- player car -->
+        <rect x="385" y="430" width="30" height="50" rx="4" fill="#fbbf24"/>
+        
+  <text x="60" y="450" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#e2e8f0" letter-spacing="2">OBSTACLE AVOIDANCE</text>
+  <text x="62" y="478" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" fill="#e2e8f0" opacity="0.65">3D Endless Runner</text>
+</svg>

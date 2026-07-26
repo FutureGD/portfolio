@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="BRICK BREAKER thumbnail">
+  <rect width="800" height="500" fill="#1e1b4b"/>
+  
+        <g fill="#fde047" opacity="0.85">
+          <rect x="180" y="180" width="60" height="24" rx="2"/>
+          <rect x="246" y="180" width="60" height="24" rx="2"/>
+          <rect x="312" y="180" width="60" height="24" rx="2"/>
+          <rect x="378" y="180" width="60" height="24" rx="2"/>
+          <rect x="444" y="180" width="60" height="24" rx="2"/>
+          <rect x="210" y="210" width="60" height="24" rx="2" opacity="0.7"/>
+          <rect x="276" y="210" width="60" height="24" rx="2" opacity="0.7"/>
+          <rect x="342" y="210" width="60" height="24" rx="2" opacity="0.7"/>
+          <rect x="408" y="210" width="60" height="24" rx="2" opacity="0.7"/>
+          <rect x="474" y="210" width="60" height="24" rx="2" opacity="0.7"/>
+          <rect x="180" y="240" width="60" height="24" rx="2" opacity="0.5"/>
+          <rect x="246" y="240" width="60" height="24" rx="2" opacity="0.5"/>
+          <rect x="312" y="240" width="60" height="24" rx="2" opacity="0.5"/>
+        </g>
+        <!-- ball -->
+        <circle cx="400" cy="340" r="10" fill="#f59e0b"/>
+        <!-- paddle -->
+        <rect x="350" y="400" width="100" height="14" rx="4" fill="#f59e0b"/>
+        
+  <text x="60" y="450" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#e0e7ff" letter-spacing="2">BRICK BREAKER</text>
+  <text x="62" y="478" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" fill="#e0e7ff" opacity="0.65">Classic / Prototype</text>
+</svg>

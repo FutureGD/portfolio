@@ -1,0 +1,62 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  # Allow manual runs from the Actions tab so you can redeploy without
+  # pushing an empty commit.
+  workflow_dispatch:
+
+# Permissions required by actions/deploy-pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deploy at a time per branch.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - run: npm ci
+
+      # `NEXT_PUBLIC_*` vars are baked into the static build at build time,
+      # so they must be set in the env that runs `npm run build`.
+      # Defaults are safe: no basePath, no site URL, no form endpoint,
+      # no resume URL. Override NEXT_PUBLIC_BASE_PATH with `/<your-repo-name>`
+      # in your repo's Variables (Settings → Secrets and variables → Actions → Variables).
+      - name: Build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_FORMSPREE_ENDPOINT: ${{ secrets.NEXT_PUBLIC_FORMSPREE_ENDPOINT }}
+          NEXT_PUBLIC_RESUME_URL: ${{ secrets.NEXT_PUBLIC_RESUME_URL }}
+        run: npm run build
+
+      # `.nojekyll` tells GitHub Pages to skip Jekyll processing. Without it,
+      # files and folders starting with `_` (like `_next/`) silently 404.
+      - name: Add .nojekyll
+        run: touch out/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

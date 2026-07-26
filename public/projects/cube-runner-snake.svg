@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="CUBE RUNNER & SNAKE thumbnail">
+  <rect width="800" height="500" fill="#1a0f0a"/>
+  
+        <g opacity="0.85">
+          <!-- cube (3D) -->
+          <g transform="translate(180,200)">
+            <polygon points="0,40 40,60 80,40 40,20" fill="#a3e635" opacity="0.8"/>
+            <polygon points="0,40 0,90 40,110 40,60" fill="#a3e635" opacity="0.6"/>
+            <polygon points="80,40 80,90 40,110 40,60" fill="#a3e635" opacity="0.7"/>
+          </g>
+          <!-- snake -->
+          <g transform="translate(380,260)">
+            <rect x="0" y="0" width="20" height="20" fill="#84cc16" rx="3"/>
+            <rect x="24" y="0" width="20" height="20" fill="#84cc16" rx="3" opacity="0.85"/>
+            <rect x="48" y="0" width="20" height="20" fill="#84cc16" rx="3" opacity="0.7"/>
+            <rect x="48" y="24" width="20" height="20" fill="#84cc16" rx="3" opacity="0.6"/>
+            <rect x="48" y="48" width="20" height="20" fill="#84cc16" rx="3" opacity="0.5"/>
+            <rect x="72" y="48" width="20" height="20" fill="#84cc16" rx="3" opacity="0.4"/>
+            <circle cx="120" cy="58" r="12" fill="#84cc16"/>
+          </g>
+        </g>
+        
+  <text x="60" y="450" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#fde68a" letter-spacing="2">CUBE RUNNER & SNAKE</text>
+  <text x="62" y="478" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" fill="#fde68a" opacity="0.65">2D / 3D Prototypes</text>
+</svg>
